@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
+:root {
+    --fuente: 'Roboto', 'Sans serif';
+    /*Colores Pokemon*/
+    --normal: #c587a1;
+    --pelea: #dd4444c5;
+    --vuelo: #3449a8;
+    --veneno: #833297;
+    --tierra: brown;
+    --roca: rgb(129, 34, 34);
+    --bicho: #66ff00;
+    --fantasma: rgb(151, 148, 148);
+    --acero: #e3e4e5;
+    --fuego: red;
+    --agua: aqua;
+    --hierva: green;
+    --electrico: #b1ae24;
+    --psiquico: #ae00ff;
+    --hielo: #005e75;
+    --dragon: #960000;
+    --oscuro: black;
+    --magico: #ff0080;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente);
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.bg_animate {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, black, #55555e);
+    position: relative;
+    overflow: hidden;
+}
+
+.header_nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header_nav .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header_nav nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.banner-buscador {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.banner_title h2 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.banner_title .llamanos {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    background: #1A2849;
+    padding: 20px;
+}
+
+.banner_img {
+    animation: movimiento 2.5s linear infinite;
+}
+
+.banner_img img {
+    width: 300px;
+    display: block;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+/*--------------------Colores de Pokemon------------------*/
+
+.normal {
+    background-color: var(--normal);
+}
+
+.fighting {
+    background-color: var(--pelea);
+}
+
+.flying {
+    background-color: var(--vuelo);
+}
+
+.poison {
+    background-color: var(--veneno);
+}
+
+.ground {
+    background-color: var(--tierra);
+}
+
+.rock {
+    background-color: var(--tierra);
+}
+
+.bug {
+    background-color: var(--bicho);
+}
+
+.ghost {
+    background-color: var(--fantasma);
+}
+
+.steel {
+    background-color: var(--acero);
+}
+
+.fire {
+    background-color: var(--fuego);
+}
+
+.water {
+    background-color: var(--agua);
+}
+
+.grass {
+    background-color: var(--hierva);
+}
+
+.electric {
+    background-color: var(--electrico);
+}
+
+.psychic {
+    background-color: var(--psiquico);
+}
+
+.ice {
+    background-color: var(--hielo);
+}
+
+.dragon {
+    background-color: var(--dragon);
+}
+
+.dark {
+    background-color: var(--oscuro);
+}
+
+.fairy {
+    background-color: var(--magico);
+}
+
+
+/*--------------------Iconos------------------------------*/
+
+.iconify {
+    font-size: 40px;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1A2849;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.iconify:hover {
+    color: white;
+}
+
+
+/*------------------------- burbujas ----------------------*/
+
+.burbuja {
+    border-radius: 50%;
+    background: #fff;
+    opacity: .3;
+    position: absolute;
+    bottom: -150;
+    animation: burbujas 3s linear infinite;
+}
+
+.burbuja:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3) {
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 7s;
+}
+
+.burbuja:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(5) {
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(6) {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(7) {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(8) {
+    width: 100;
+    height: 100px;
+    left: 52%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(9) {
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(10) {
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+
+@keyframes burbujas {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+    30% {
+        transform: translateX(30px);
+    }
+    50% {
+        opacity: .4;
+    }
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+@keyframes movimiento {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/*-----------------------Estilos de Letra ------------------- */
+
+.contenedor h1 {
+    color: white;
+}
+
+h1 {
+    font-family: var(--fuente);
+    font-weight: bold;
+}
+
+a {
+    font-weight: bold;
+}
+
+input {
+    font-family: var(--fuente);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.pokeName {
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.dark li {
+    color: white;
+}

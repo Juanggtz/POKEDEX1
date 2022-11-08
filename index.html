@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.iconify.design/2/2.2.0/iconify.min.js"></script>
+</head>
+
+<body>
+    <header class="bg_animate">
+        <div class="header_nav">
+            <div class="contenedor">
+                <h1><span class="iconify" data-icon="mdi:pokeball"></span>Pokedex</h1>
+                <nav>
+                    <a href="https://www.pokemon.com/el/">Pokemon</a>
+                </nav>
+            </div>
+        </div>
+
+        <section class="banner contenedor">
+            <secrion class="banner_title">
+                <div class="banner-buscador">
+                    <input type="text" id="nombre_pokemon" placeholder="Ingrese nombre o numero">
+                    <button onclick="fetchPokemon()" id="boton"><span class="iconify" data-icon="ic:outline-search"></span></button>
+                </div>
+            </secrion>
+            <div class="banner_img">
+                <div class="pokeInfor">
+                    <img src="./assets/pokebola.png" alt="Imagen de Pokemon" id="pokeImg" class=""><br>
+                    <h1 id="pokeName" class="pokeName"></h1>
+                    <div class="pokeMessure">
+                        <br>
+                        <h1 id="Medida"></h1>
+                        <h2 id="pokeWeight"></h2>
+                        <h2 id="pokeHeight"></h2>
+                    </div>
+                    <br>
+                    <h1 id="Estadisticas"></h1>
+                    <ul id="pokeList" class="dark1"></ul>
+                </div>
+                <h1 id="pokeStats"></h1>
+            </div>
+        </section>
+
+        <br>
+        <br>
+        <h1 id="Movimientos"></h1>
+        <ul id="=pokeMoves"></ul>
+
+        <div class="burbujas">
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+        </div>
+    </header>
+
+    <footer>
+        <script src="./app.js"></script>
+
+        <script>
+            var input = document.getElementById("nombre_pokemon");
+            input.addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    document.getElementById("boton").click();
+                }
+            });
+        </script>
+    </footer>
+
+</body>
+
+</html>
